@@ -146,7 +146,7 @@ $(document).ready(function(){
 				}
 			}
 			else if(temp[2] == 's' || temp[2] == 'S'){
-				if(temp[0]+temp[1] == '4'){
+				if(temp[0] == '4'){
 					alert('out of bounds');
 				}
 				else{
