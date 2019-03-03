@@ -72,7 +72,6 @@ $(document).ready(function(){
 					document.getElementById(temp[0]+temp[1]).style.backgroundImage = "url('img/pacmanRightOpen.png')";
 					document.getElementById(temp[0]+temp[1]).name = "pacmanRightOpen";
 					document.getElementById(temp[0]+temp[1]).style.backgroundSize = "70px 70px";
-					$(temp[0]+temp[0]+temp[1]).empty(); 
 					check = true;
 					setTimeout(function() {
 						var s = parseInt(temp[1]);
@@ -94,7 +93,6 @@ $(document).ready(function(){
 					document.getElementById(temp[0]+temp[1]).style.backgroundImage = "url('img/pacmanRightOpen.png')";
 					document.getElementById(temp[0]+temp[1]).name = "pacmanRightOpen";
 					document.getElementById(temp[0]+temp[1]).style.backgroundSize = "70px 70px";
-					$(temp[0]+temp[0]+temp[1]).empty(); 
 					check = true;
 					setTimeout(function() {
 						y--;
