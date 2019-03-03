@@ -37,28 +37,6 @@ $(document).ready(function(){
 		
 	}
 	
-	function row0(temp){
-		document.getElementById(temp[1]).style.backgroundImage = "url('img/pacmanRightOpen.png')";
-		document.getElementById(temp[1]).name = "pacmanRightOpen";
-		document.getElementById(temp[1]).style.backgroundSize = "70px 70px";
-	}
-	
-	function row1(temp){
-		
-	}
-	
-	function row2(temp){
-		alert(temp[0]);
-	}
-	
-	function row3(temp){
-		alert(temp[0]);
-	}
-	
-	function row4(temp){
-		alert(temp[0]);
-	}
-	
 	function handleEvent(event){
 		console.log(event.which);
 		switch(event.which){
@@ -80,8 +58,21 @@ $(document).ready(function(){
 		}
 	}
 	
+	function reset(){
+		$( ".line" ).each(function( index ) {
+			if ($(this).css('background-image') != 'none') { 
+				var x = $(this).attr('id');
+				//$("#"+x).css('background-image') = ""; 
+				$('#'+x).css('background', '');
+			}
+		});
+	}
+	
 	function getMove(){
 		var check = false;
+		
+		reset();
+		
 		while(!check){
 			var input = prompt("Enter X,Y,F");
 			var temp = input.split(',');
@@ -172,7 +163,7 @@ $(document).ready(function(){
 						document.getElementById(y.toString()+temp[1]).name = "downLeft";
 						document.getElementById(y.toString()+temp[1]).style.backgroundSize = "70px 70px";
 						$(temp[0]+temp[1]).empty(); 
-						alert(y.toString()+ temp[1]+",EAST");	
+						alert(y.toString()+","+ temp[1]+",SOUTH");	
 					}, 1000);
 				}
 			}
