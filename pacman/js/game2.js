@@ -40,8 +40,20 @@ $(document).ready(function(){
 	function handleEvent(event){
 		console.log(event.which);
 		switch(event.which){
-			case 32://space bar
+			case 32://right
 				getMove();
+				break;
+			case 39://right
+				moveRight();
+				break;
+			case 40://down
+				moveDown();
+				break;
+			case 37://left
+				moveLeft();
+				break;
+			case 38://up
+				moveUp();
 				break;
 		}
 	}
@@ -49,7 +61,8 @@ $(document).ready(function(){
 	function reset(){
 		$( ".line" ).each(function( index ) {
 			if ($(this).css('background-image') != 'none') { 
-				var x = $(this).attr('id'); 
+				var x = $(this).attr('id');
+				//$("#"+x).css('background-image') = ""; 
 				$('#'+x).css('background', '');
 			}
 		});
@@ -65,7 +78,7 @@ $(document).ready(function(){
 			var temp = input.split(',');
 			var y = parseInt(temp[0]);
 			if(temp[2] == 'w' || temp[2] == 'W'){
-				if(temp[0]+temp[1] == '00' || temp[0]+temp[1] == '10' || temp[0]+temp[1] == '20' || temp[0]+temp[1] == '30' || temp[0]+temp[1] == '40'){
+				if(temp[1] == '0'){
 					alert("out of bounds");
 				}
 				else{
@@ -108,7 +121,7 @@ $(document).ready(function(){
 				}
 			}
 			else if(temp[2] == 'E' || temp[2]=='e'){
-				if(temp[0]+temp[1] == '04' || temp[0]+temp[1] == '14' || temp[0]+temp[1] == '24' || temp[0]+temp[1] == '34' || temp[0]+temp[1] == '44'){
+				if(temp[1] == '4'){
 					alert('out of bounds');
 				}
 				else{
