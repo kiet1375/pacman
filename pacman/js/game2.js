@@ -118,7 +118,7 @@ $(document).ready(function(){
 						document.getElementById(y+temp[1]).name = "upRight";
 						document.getElementById(y+temp[1]).style.backgroundSize = "70px 70px";
 						$(temp[0]+temp[1]).empty(); 
-						alert(y.toString()+temp[1]+",NORTH");	
+						alert(y.toString()+","+temp[1]+",NORTH");	
 					}, 1000);
 				}
 			}
