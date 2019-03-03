@@ -40,20 +40,8 @@ $(document).ready(function(){
 	function handleEvent(event){
 		console.log(event.which);
 		switch(event.which){
-			case 32://right
+			case 32://space bar
 				getMove();
-				break;
-			case 39://right
-				moveRight();
-				break;
-			case 40://down
-				moveDown();
-				break;
-			case 37://left
-				moveLeft();
-				break;
-			case 38://up
-				moveUp();
 				break;
 		}
 	}
