@@ -1,7 +1,6 @@
-
 $(document).ready(function(){
 	$(document).on('keydown', handleEvent);
-	
+
 	if ( $('.grid').children().length == 0 ) {
 		for(var i = 1; i < 65; i++){
 			var column = document.createElement("DIV");
@@ -45,19 +44,8 @@ $(document).ready(function(){
 		document.getElementById("51").style.borderBottom = "1px solid red";
 		document.getElementById("56").style.borderBottom = "1px solid red";
 		document.getElementById("58").style.backgroundColor = "black";
-		setMove1();
 	}
-	
-	function setMove1(){
-		document.getElementById("1").style.backgroundImage = "";
-		document.getElementById("1").name = "";
-		document.getElementById("2").style.backgroundImage = "url('img/pacmanRightClosed.png')";
-		document.getElementById("2").name = "pacmanRightClose";
-		document.getElementById("2").style.backgroundSize = "70px 70px";
-		$("#2").empty(); 
-		alert("0,0,NORTH");
-	}
-	
+
 	function handleEvent(event){
 		switch(event.which){
 			case 39://right
@@ -74,7 +62,7 @@ $(document).ready(function(){
 				break;
 		}
 	}
-	
+
 	function moveRight(){
 		var i = 0;
 		$( ".row" ).each(function( index ) {
@@ -274,7 +262,7 @@ $(document).ready(function(){
 			}
 		});
 	}
-	
+
 	function moveLeft(){
 		var i = 0;
 		$( ".row" ).each(function( index ) {
@@ -474,7 +462,7 @@ $(document).ready(function(){
 			}
 		});
 	}
-	
+
 	function moveUp(){
 		$( ".row" ).each(function( index ) {
 			if ($(this).css('background-image') != 'none') {
@@ -824,7 +812,7 @@ $(document).ready(function(){
 			}
 		});
 	}
-	
+
 	function moveDown(){
 		$( ".row" ).each(function( index ) {
 			if ($(this).css('background-image') != 'none') {
@@ -1154,5 +1142,5 @@ $(document).ready(function(){
 			}
 		});
 	}
-	
-});
+
+}); 
