@@ -95,7 +95,6 @@ $(document).ready(function(){
 						document.getElementById(y.toString()+s.toString()).style.backgroundImage = "url('img/pacmanLeftClosed.png')";
 						document.getElementById(y.toString()+s.toString()).name = "pacmanLeftClose";
 						document.getElementById(y.toString()+s.toString()).style.backgroundSize = "70px 70px";
-						$(temp[0]+temp[1]).empty(); 
 						alert(y.toString()+","+s.toString()+",WEST");	
 					}, 1000);					
 				}
@@ -116,8 +115,7 @@ $(document).ready(function(){
 						document.getElementById(temp[0]+temp[1]).name = "";
 						document.getElementById(y+temp[1]).style.backgroundImage = "url('img/upRight.png')";
 						document.getElementById(y+temp[1]).name = "upRight";
-						document.getElementById(y+temp[1]).style.backgroundSize = "70px 70px";
-						$(temp[0]+temp[1]).empty(); 
+						document.getElementById(y+temp[1]).style.backgroundSize = "70px 70px"; 
 						alert(y.toString()+","+temp[1]+",NORTH");	
 					}, 1000);
 				}
@@ -130,7 +128,8 @@ $(document).ready(function(){
 					document.getElementById(temp[0]+temp[1]).style.backgroundImage = "url('img/pacmanRightOpen.png')";
 					document.getElementById(temp[0]+temp[1]).name = "pacmanRightOpen";
 					document.getElementById(temp[0]+temp[1]).style.backgroundSize = "70px 70px";
-					$(temp[0]+temp[0]+temp[1]).empty(); 
+					temp=
+					alert(temp.length);
 					check = true;
 					setTimeout(function() {
 						var s = parseInt(temp[1]);
@@ -139,8 +138,7 @@ $(document).ready(function(){
 						document.getElementById(temp[0]+temp[1]).name = "";
 						document.getElementById(y.toString()+s.toString()).style.backgroundImage = "url('img/pacmanRightClosed.png')";
 						document.getElementById(y.toString()+s.toString()).name = "pacmanRightClose";
-						document.getElementById(y.toString()+s.toString()).style.backgroundSize = "70px 70px";
-						$(temp[0]+temp[1]).empty(); 
+						document.getElementById(y.toString()+s.toString()).style.backgroundSize = "70px 70px"; 
 						alert(y.toString()+","+s.toString()+",EAST");	
 					}, 1000);
 				}
@@ -162,7 +160,6 @@ $(document).ready(function(){
 						document.getElementById(y.toString()+temp[1]).style.backgroundImage = "url('img/downLeft.png')";
 						document.getElementById(y.toString()+temp[1]).name = "downLeft";
 						document.getElementById(y.toString()+temp[1]).style.backgroundSize = "70px 70px";
-						$(temp[0]+temp[1]).empty(); 
 						alert(y.toString()+","+ temp[1]+",SOUTH");	
 					}, 1000);
 				}
