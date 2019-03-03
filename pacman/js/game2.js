@@ -49,8 +49,7 @@ $(document).ready(function(){
 	function reset(){
 		$( ".line" ).each(function( index ) {
 			if ($(this).css('background-image') != 'none') { 
-				var x = $(this).attr('id');
-				//$("#"+x).css('background-image') = ""; 
+				var x = $(this).attr('id'); 
 				$('#'+x).css('background', '');
 			}
 		});
